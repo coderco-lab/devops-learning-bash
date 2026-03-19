@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Prompt user for input
+echo -n "Enter first number: "
+read num1
+
+echo -n "Enter second number: "
+read num2
+
+# Perform calculations
+sum=$((num1 + num2))
+diff=$((num1 - num2))
+prod=$((num1 * num2))
+
+# Display results
+echo "Results:"
+echo "$num1 + $num2 = $sum"
+echo "$num1 - $num2 = $diff"
+echo "$num1 × $num2 = $prod"
+
+# Handle division by zero
+if [ "$num2" -eq 0 ]; then
+    echo "$num1 ÷ $num2 = Error (division by zero)"
+else
+    div=$((num1 / num2))
+    echo "$num1 ÷ $num2 = $div"
+fi
+this script allows for 2 numbers to be devided, added and subracticted from each other and it outputs this with the formula.
